@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+#Myelement {
+margin-top: 40px;
+border-radius: 2px;
+border: 5px blue;
+border-style: solid;
+background-color:yellow;
+width: 200px;
+height: 150px;
+}
+</style>
+</head>
+<body>
+    <center>
+    <div id="Myelement">
+        <br><br><br>
+        <div class="t1">Welcome Text</div>
+    </center></div>
+
+    Background Color: <input name="MyColorPicker" type="color" id="MyColorPicker" onchange="change()" /><br><br><br>
+    Text Color: <input name="MyColor" type="color" id="color1" onchange="change()"/><br><br><br>
+    Text Size:<select name="Text Size" id="num" onchange="change()">
+        <option value="10" onchange="change()">10</option>
+        <option value="20" onchange="change()">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+    </select><br><br><br>
+    Box width: <input type="text" id="t2" onkeyup="change()"><br><br><br>
+    Box Height: <input type="text" id="t3" onkeyup="change()"><br><br><br>
+    <input type="range" id="r" onchange="change()" min="0" max="40px"><br><br>
+    Border Radius
+
+<script>
+function change(){
+    var box = document.getElementById("box");
+    var bgcolor = document.getElementById("background").value;
+    var txtcolor = document.getElementById("textcolor").value;
+    var width = document.getElementById("width").value;
+    var height = document.getElementById("height").value;
+    var size = document.getElementById("size").value;
+    var range = document.getElementById("range").value;
+
+    box.style.backgroundColor =bgcolor;
+    box.style.color =txtcolor;
+    box.style.width =width + "px";
+    box.style.height =height + "px";
+    box.style.fontSize =size + "px";
+    box.style.borderRadius =range + "px";
+}
+
+
+</script>
+</body>
+</html>

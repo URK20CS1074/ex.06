@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+#Myelement {
+margin-top: 40px;
+border-radius: 2px;
+border: 5px blue;
+border-style: solid;
+background-color:yellow;
+width: 200px;
+height: 150px;
+}
+</style>
+</head>
+<body>
+    <center>
+    <div id="Myelement">
+        <br><br><br>
+        <div class="t1">Welcome Text</div>
+    </center></div>
+
+    Background Color: <input name="MyColorPicker" type="color" id="MyColorPicker" onchange="changeColor()" /><br><br><br>
+    Text Color: <input name="MyColor" type="color" id="color1" onchange="changeColor1()"/><br><br><br>
+    Text Size:<select name="Text Size" id="num" onchange="textsize()">
+        <option value="10" onchange="textsize()">10</option>
+        <option value="20" onchange="textsize()">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+    </select><br><br><br>
+    Box width: <input type="text" id="t2" onkeyup="changewidth()"><br><br><br>
+    Box Height: <input type="text" id="t3" onkeyup="changeheight()"><br><br><br>
+    <input type="range" id="r" onchange="opacity()" min="0" max="40px"><br><br>
+    Border Radius
+
+<script>
+function changeColor() {
+document.getElementById("Myelement").style.backgroundColor = document.getElementById("MyColorPicker").value;
+}
+function changeColor1() {
+document.getElementById("Myelement").style.color =document.getElementById("color1").value;
+}
+function textsize(){
+    document.getElementById(".t1").style.fontSize= document.getElementById("num").value;
+}
+function opacity(){
+    document.getElementById("Myelement").style.borderRadius=document.getElementById("r").value;
+}
+
+function changewidth(){
+    document.getElementById("Myelement").style.width=document.getElementById("t2").value;
+}
+function changeheight(){
+    document.getElementById("Myelement").style.height=document.getElementById("t3").value;
+}
+
+</script>
+</body>
+</html>
